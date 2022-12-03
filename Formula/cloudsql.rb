@@ -5,20 +5,20 @@
 class Cloudsql < Formula
   desc "cloudsql"
   homepage "https://github.com/s-okayama/cloudsql"
-  version "1.2.2"
+  version "1.2.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/s-okayama/cloudsql/releases/download/v1.2.2/cloudsql_1.2.2_Darwin_arm64.tar.gz"
-      sha256 "32ed00ebed14c155f36c94c59dc25d8c55578a1457f56711ed3eeb097b6868ba"
+      url "https://github.com/s-okayama/cloudsql/releases/download/v1.2.3/cloudsql_1.2.3_Darwin_arm64.tar.gz"
+      sha256 "0f1610135eaabc1cb66d76e4f7ca8795d5093f4d3a98c2ed498d71b720c41962"
 
       def install
         bin.install "cloudsql"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/s-okayama/cloudsql/releases/download/v1.2.2/cloudsql_1.2.2_Darwin_x86_64.tar.gz"
-      sha256 "96b202bc9231430d406de3aad2f0c0ba3f72ec5193e6556960e2784d1a532ea0"
+      url "https://github.com/s-okayama/cloudsql/releases/download/v1.2.3/cloudsql_1.2.3_Darwin_x86_64.tar.gz"
+      sha256 "4128a636032e33128a992fb0d0aaf43e21365368ad34af64a34fb9817f913fd4"
 
       def install
         bin.install "cloudsql"
@@ -28,16 +28,16 @@ class Cloudsql < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/s-okayama/cloudsql/releases/download/v1.2.2/cloudsql_1.2.2_linux_arm64.tar.gz"
-      sha256 "ead04d4906bb030fd2d4cd84dbf573c657bb7798c8ec38f0f8f67e77806fec2b"
+      url "https://github.com/s-okayama/cloudsql/releases/download/v1.2.3/cloudsql_1.2.3_linux_arm64.tar.gz"
+      sha256 "875ae6c4addd726cbe8a44eef4aeee7f213da3cb06de42be355adfffd085e040"
 
       def install
         bin.install "cloudsql"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/s-okayama/cloudsql/releases/download/v1.2.2/cloudsql_1.2.2_linux_x86_64.tar.gz"
-      sha256 "ee58855aa0dcf5b3ac6f0ea5a57763e5a484941a52f3240c2005f1979ae09c16"
+      url "https://github.com/s-okayama/cloudsql/releases/download/v1.2.3/cloudsql_1.2.3_linux_x86_64.tar.gz"
+      sha256 "942defa77b0f6e5cb535718a6041d44b89bd7567347c231ff081d17c11c18449"
 
       def install
         bin.install "cloudsql"
@@ -46,6 +46,6 @@ class Cloudsql < Formula
   end
 
   test do
-    system "#{bin}/gorillang --version"
+    system "#{bin}/cloudsql --version"
   end
 end
