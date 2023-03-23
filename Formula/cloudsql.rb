@@ -5,20 +5,20 @@
 class Cloudsql < Formula
   desc "cloudsql"
   homepage "https://github.com/s-okayama/cloudsql"
-  version "2.0.0"
+  version "2.0.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.0/cloudsql_2.0.0_Darwin_arm64.tar.gz"
-      sha256 "8909878d3194ed763b9d791a67f9fa42e493ac6003decfb2ff87580579e29c48"
+      url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.1/cloudsql_2.0.1_Darwin_arm64.tar.gz"
+      sha256 "6f8b224e231b31a4d0d716baa0083693ed32b9d1633ae7030b79aab9ab5de6bc"
 
       def install
         bin.install "cloudsql"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.0/cloudsql_2.0.0_Darwin_x86_64.tar.gz"
-      sha256 "3508afc51fc286e9ad9ff87ad8dfaa304b6f1d7eca6f3e09beb50e39e17c34ff"
+      url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.1/cloudsql_2.0.1_Darwin_x86_64.tar.gz"
+      sha256 "79aaeae3bf480f3e53b64f416ea3ef8d9c7c98a161fc3b8e3b020893f908ad94"
 
       def install
         bin.install "cloudsql"
@@ -28,16 +28,16 @@ class Cloudsql < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.0/cloudsql_2.0.0_linux_arm64.tar.gz"
-      sha256 "deeac94f803e65379eb56ffe19661fad56c981defb4b58855e83c95c49fe315a"
+      url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.1/cloudsql_2.0.1_linux_arm64.tar.gz"
+      sha256 "484a8cb1c060e111f1ea3b16a39478388fc69b2260f56340434270505a92e5d0"
 
       def install
         bin.install "cloudsql"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.0/cloudsql_2.0.0_linux_x86_64.tar.gz"
-      sha256 "00c83a953b5e83ce27c6927076c629bb4e0526c1c8f693064ced01743f860d50"
+      url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.1/cloudsql_2.0.1_linux_x86_64.tar.gz"
+      sha256 "a383e8baa07045777cd274915b5c111b882175afe3fa7c83aeb815f09ab7619c"
 
       def install
         bin.install "cloudsql"
