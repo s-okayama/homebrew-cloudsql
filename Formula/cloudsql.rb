@@ -5,20 +5,20 @@
 class Cloudsql < Formula
   desc "cloudsql"
   homepage "https://github.com/s-okayama/cloudsql"
-  version "2.0.5"
+  version "2.0.6"
 
   on_macos do
     on_intel do
-      url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.5/cloudsql_2.0.5_Darwin_64bit.tar.gz"
-      sha256 "37ddf7bd64be77ae0272f20c8f097486bab22153e04070a5376ba077fe64594c"
+      url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.6/cloudsql_2.0.6_Darwin_64bit.tar.gz"
+      sha256 "5e80b683162c27907560172c472af74abfb7642642a108f0c5300f24e5ab7686"
 
       def install
         bin.install "cloudsql"
       end
     end
     on_arm do
-      url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.5/cloudsql_2.0.5_Darwin_ARM64.tar.gz"
-      sha256 "e4a8286e9e2bef8612ac031758d59579065069dd4f248173effccedaf83de435"
+      url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.6/cloudsql_2.0.6_Darwin_ARM64.tar.gz"
+      sha256 "050a91d52ad0c37abddcf83b634f8cf8fcb76c97ab6d70bda8395fc3f9815f41"
 
       def install
         bin.install "cloudsql"
@@ -29,8 +29,8 @@ class Cloudsql < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.5/cloudsql_2.0.5_Linux_64bit.tar.gz"
-        sha256 "d869ccfaccd9aa890ba4432cef74f974e3e432b4da4cee7d2e84535e83615cdc"
+        url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.6/cloudsql_2.0.6_Linux_64bit.tar.gz"
+        sha256 "d194ce3fdd8b7bdee1edd02e4b364da1c1e90f6fb4889410e4804e8b55298bfa"
 
         def install
           bin.install "cloudsql"
@@ -39,8 +39,8 @@ class Cloudsql < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.5/cloudsql_2.0.5_Linux_ARM64.tar.gz"
-        sha256 "50619182bda825f71c87b3b24fcf82ce3351cd593e443edb1d62708c8ec32e12"
+        url "https://github.com/s-okayama/cloudsql/releases/download/v2.0.6/cloudsql_2.0.6_Linux_ARM64.tar.gz"
+        sha256 "f0ca26d2458121e28b4f4478e407ba4c79331396bc50d8f634d819f76799bf47"
 
         def install
           bin.install "cloudsql"
