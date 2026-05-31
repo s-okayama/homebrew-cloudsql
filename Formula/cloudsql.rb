@@ -5,39 +5,39 @@
 class Cloudsql < Formula
   desc "cloudsql"
   homepage "https://github.com/s-okayama/cloudsql"
-  version "2.1.2"
+  version "2.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/s-okayama/cloudsql/releases/download/v2.1.2/cloudsql_2.1.2_Darwin_64bit.tar.gz"
-      sha256 "444c1c805051af5ca8430a0f89235909f4400eae568ed591bf2e488625372f5d"
+      url "https://github.com/s-okayama/cloudsql/releases/download/v2.2.0/cloudsql_2.2.0_Darwin_64bit.tar.gz"
+      sha256 "eb5d656c0563e68bc7b075e056a77c5e5774747ff14f4cc7f1dae4764010e9c5"
 
-      def install
+      define_method(:install) do
         bin.install "cloudsql"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/s-okayama/cloudsql/releases/download/v2.1.2/cloudsql_2.1.2_Darwin_ARM64.tar.gz"
-      sha256 "d766a7edf3a0ee55ff352d658e298f9468b5fc1a8ef87571b9585b99ca094bd6"
+      url "https://github.com/s-okayama/cloudsql/releases/download/v2.2.0/cloudsql_2.2.0_Darwin_ARM64.tar.gz"
+      sha256 "2210a397aa896101139adc92cd26d07fa667f3d42337161a63877f64b62418e3"
 
-      def install
+      define_method(:install) do
         bin.install "cloudsql"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/s-okayama/cloudsql/releases/download/v2.1.2/cloudsql_2.1.2_Linux_64bit.tar.gz"
-      sha256 "9356eabc397abd9bbd56270261041f5024c901617e88d350ae7779389587dd0b"
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/s-okayama/cloudsql/releases/download/v2.2.0/cloudsql_2.2.0_Linux_64bit.tar.gz"
+      sha256 "006550df28c47af20106abaf19e8d6f033a4afd0fd5e4bb7b18973e5a4d1e950"
+      define_method(:install) do
         bin.install "cloudsql"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/s-okayama/cloudsql/releases/download/v2.1.2/cloudsql_2.1.2_Linux_ARM64.tar.gz"
-      sha256 "32b33dc4d95ec656c7409ac7e6ac5615d604e58f9482ace7bf26a3cd9152810a"
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/s-okayama/cloudsql/releases/download/v2.2.0/cloudsql_2.2.0_Linux_ARM64.tar.gz"
+      sha256 "37c5479841fe8cfb0d228cd56ca43fa0a5279c2b99ee8f2e514971c4f3a86625"
+      define_method(:install) do
         bin.install "cloudsql"
       end
     end
